@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: 'dist', // Ensure this matches the distDir in vercel.json
+    outDir: '/dist',
   },
 });
