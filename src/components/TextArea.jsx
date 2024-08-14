@@ -48,6 +48,7 @@ export default function MyComponent() {
   return (
     <>
       <h2>TextSaver</h2>
+      <p>Automatically will be deleted in 2 days</p>
       <ReactQuill
         theme="snow"
         value={value}
