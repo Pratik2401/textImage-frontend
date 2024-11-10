@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
@@ -27,8 +27,6 @@ const formats = [
 export default function MyComponent() {
   
 
-
-
   const [value, setValue] = useState('');
   const navigate = useNavigate();
 
@@ -36,7 +34,6 @@ export default function MyComponent() {
     try {
       const response = await axios.post('https://textimagesaver.vercel.app/api/message/send', { message: value });
       const { id } = response.data;
-
       navigate(`/${id}`);
     } catch (error) {
       console.error("Error saving the note", error);
